@@ -11,13 +11,26 @@ public class LeftNav extends Parent{
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
+    @FindBy(xpath="(//span[text()='Human Resources'])[1]")
+    private WebElement humanResources;
+
+    @FindBy(xpath="(//span[text()='Setup'])[3]")
+    private WebElement setupThree;
+
+    @FindBy(xpath="(//span[text()='Positions'])[1]")
+    private WebElement positions;
+
+
 
 
     WebElement myElement;
-    public void findAndClick(String strElement){  // 2.aşama
-        // burda string isimden weblemente ulaşıcam
+    public void findAndClick(String strElement){
+
         switch (strElement)
         {
+            case "humanResources" : myElement=humanResources; break;
+            case "setupThree" : myElement=setupThree; break;
+            case "positions" : myElement=positions; break;
 
         }
 

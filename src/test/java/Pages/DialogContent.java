@@ -28,24 +28,41 @@ public class DialogContent extends Parent {
     @FindBy(xpath="(//ms-add-button[contains(@tooltip,'TITLE.ADD')])//button")
     private WebElement addButton;
 
+    @FindBy(xpath="//ms-text-field[@formcontrolname='name']//input")
+    private WebElement nameInput;
+
+    @FindBy(xpath="//ms-text-field[@formcontrolname='shortName']//input")
+    private WebElement shortNameInput;
+
+    @FindBy(xpath="//ms-save-button//button")
+    private WebElement saveButton;
 
     @FindBy(xpath="//div[contains(text(),'successfully')]")
     private WebElement successMessage;
 
 
+    @FindBy(xpath = "(//div[contains(@class,'mat-form-field-infix ng-tns-c74')]//input)[1]")
+    private WebElement searchInput;
 
+    @FindBy(xpath = "//ms-search-button//button")
+    private WebElement searchButton;
+
+    @FindBy(xpath = "//ms-delete-button//button")
+    private WebElement deleteButton;
+
+    @FindBy(xpath = "//span[contains(text(),'Delete')]")
+    private WebElement deleteDialogBtn;
 
 
 
     WebElement myElement;
     public void findAndSend(String strElement, String value)
     {
-
-
         switch (strElement){
             case "username" : myElement=username; break;
             case "password" : myElement=password; break;
-
+            case "nameInput" : myElement=nameInput; break;
+            case "shortNameInput" : myElement=shortNameInput; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -57,6 +74,7 @@ public class DialogContent extends Parent {
             case "acceptCookies" : myElement=acceptCookies; break;
             case "loginButton" : myElement=loginButton; break;
             case "addButton" : myElement=addButton; break;
+            case "saveButton" : myElement=saveButton; break;
         }
 
         clickFunction(myElement);
@@ -73,13 +91,13 @@ public class DialogContent extends Parent {
 
     }
     public void searchAndDelete(String searchText) {
-        findAndSend("searchInput", searchText);//arama kutucuguna kelimeyi yaz
-        findAndClick("searchButton");//arama butonuna bas
+        findAndSend("searchInput", searchText);
+        findAndClick("searchButton");
 
         waitUntilLoading();
 
-        findAndClick("deleteButton");//silme butonuna bas
-        findAndClick("deleteDialogBtn");//dialogtaki silme butonuna bas
+        findAndClick("deleteButton");
+        findAndClick("deleteDialogBtn");
 
     }
 
