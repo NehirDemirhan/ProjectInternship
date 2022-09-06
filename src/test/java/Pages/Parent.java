@@ -24,6 +24,7 @@ public class Parent {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
+
     public void scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
@@ -43,6 +44,7 @@ public class Parent {
 
     public void verifyContainsText(WebElement element, String text)
     {
+
         waitUntilVisible(element); // gözükene kadar bekle
         Assert.assertTrue(element.getText().toLowerCase().contains(text.toLowerCase()));
     }
@@ -50,6 +52,11 @@ public class Parent {
     public void waitUntilLoading() {
         WebDriverWait wait=new WebDriverWait(GWD.driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.numberOfElementsToBe(By.cssSelector("fuse-progress-bar > *"), 0));
+
+        //WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
+       // wait.until(ExpectedConditions.textToBe(By.cssSelector("div[fxlayoutalign='center center'][class='control-full']"),"Search"));
+
+
     }
 
 }

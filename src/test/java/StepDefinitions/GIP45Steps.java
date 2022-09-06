@@ -36,6 +36,7 @@ public class GIP45Steps {
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
+
         dc.findAndContainsText("successMessage", "successfully");
     }
 }

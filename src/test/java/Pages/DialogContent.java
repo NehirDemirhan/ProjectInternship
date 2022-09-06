@@ -53,6 +53,24 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//span[contains(text(),'Delete')]")
     private WebElement deleteDialogBtn;
 
+    //my
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
+    private WebElement codeInputb;
+
+    @FindBy(xpath = "//ms-edit-button[@class='ng-star-inserted']//button")
+    private WebElement editButton;
+
+    @FindBy(xpath = "//ms-text-field[contains(@placeholder,\"FIELD.NAME\")]//input")
+    private WebElement searchInputb;
+
+    @FindBy(xpath = "//span[contains(text(),'Search')]")
+    private WebElement searchButtonb;
+
+    @FindBy(css = "svg[data-icon=\"trash-can\"]")
+    private WebElement deleteButtonb;
+
+
+
 
 
     WebElement myElement;
@@ -63,6 +81,9 @@ public class DialogContent extends Parent {
             case "password" : myElement=password; break;
             case "nameInput" : myElement=nameInput; break;
             case "shortNameInput" : myElement=shortNameInput; break;
+            case "codeInputb" : myElement=codeInputb; break;
+            case "searchInput" : myElement=searchInput; break;
+            case "searchInputb" : myElement=searchInputb; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -70,11 +91,23 @@ public class DialogContent extends Parent {
     }
     public void findAndClick(String strElement)
     {
+
         switch (strElement){
+
             case "acceptCookies" : myElement=acceptCookies; break;
             case "loginButton" : myElement=loginButton; break;
             case "addButton" : myElement=addButton; break;
             case "saveButton" : myElement=saveButton; break;
+            case "searchButton" : myElement=searchButton; break;
+            case "searchButtonb" : myElement=searchButtonb; break;
+            case "editButton" : myElement=editButton; break;
+            case "deleteButtonb" : myElement=deleteButtonb; break;
+            case "deleteButton" : myElement=deleteButton; break;
+            case "deleteDialogBtn" : myElement=deleteDialogBtn; break;
+
+
+
+
         }
 
         clickFunction(myElement);
@@ -100,5 +133,7 @@ public class DialogContent extends Parent {
         findAndClick("deleteDialogBtn");
 
     }
+
+
 
 }
