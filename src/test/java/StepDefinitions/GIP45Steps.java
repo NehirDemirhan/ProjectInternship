@@ -38,4 +38,15 @@ public class GIP45Steps {
     public void successMessageShouldBeDisplayed() {
         dc.findAndContainsText("successMessage", "successfully");
     }
+
+    @And("User delete item from Dialog")
+    public void userDeleteItemFromDialog(DataTable elements) {
+        List<String> listElement = elements.asList(String.class);
+        for (int i = 0; i < listElement.size(); i++) {
+            dc.searchAndDelete(listElement.get(i));
+        }
+    }
+
+
+
 }
