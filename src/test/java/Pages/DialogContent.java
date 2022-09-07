@@ -77,6 +77,21 @@ public class DialogContent extends Parent {
     @FindBy(css = "ms-edit-button[class='ng-star-inserted'] button")
     private List<WebElement> editButton;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
+    private WebElement codeInputb;
+
+    @FindBy(xpath = "//ms-text-field[contains(@placeholder,\"FIELD.NAME\")]//input")
+    private WebElement searchInputb;
+
+    @FindBy(xpath = "//span[contains(text(),'Search')]")
+    private WebElement searchButtonb;
+
+    @FindBy(xpath = "//ms-edit-button[@class='ng-star-inserted']//button")
+    private WebElement editButtonb;
+
+    @FindBy(css = "svg[data-icon=\"trash-can\"]")
+    private WebElement deleteButtonb;
+
 
 
 
@@ -91,6 +106,8 @@ public class DialogContent extends Parent {
             case "shortNameInput" : myElement=shortNameInput; break;
             case "ibanText" : myElement=ibanText; break;
             case "integrationCode" : myElement=integrationCode; break;
+            case "codeInputb" : myElement=codeInputb; break;
+            case "searchInputb" : myElement=searchInputb; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -113,6 +130,9 @@ public class DialogContent extends Parent {
                 GWD.getWait().until(ExpectedConditions.numberOfElementsToBeLessThan(By.cssSelector("ms-edit-button[class='ng-star-inserted'] button"),editButton.size()));
                 myElement=editButton.get(0);
                 break;
+            case "searchButtonb" : myElement=searchButtonb; break;
+            case "editButtonb" : myElement=editButtonb; break;
+            case "deleteButtonb" : myElement=deleteButtonb; break;
         }
 
         clickFunction(myElement);
