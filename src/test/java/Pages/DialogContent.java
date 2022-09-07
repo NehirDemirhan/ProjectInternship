@@ -46,7 +46,6 @@ public class DialogContent extends Parent {
     @FindBy(xpath="//div[contains(text(),'successfully')]")
     private WebElement successMessage;
 
-
     @FindBy(xpath = "(//div[contains(@class,'mat-form-field-infix ng-tns-c74')]//input)[1]")
     private WebElement searchInput;
 
@@ -92,6 +91,9 @@ public class DialogContent extends Parent {
     @FindBy(css = "svg[data-icon=\"trash-can\"]")
     private WebElement deleteButtonb;
 
+    @FindBy(xpath = "//mat-form-field[@appearance='outline']//textarea")
+    private WebElement description;
+
 
 
 
@@ -108,6 +110,7 @@ public class DialogContent extends Parent {
             case "integrationCode" : myElement=integrationCode; break;
             case "codeInputb" : myElement=codeInputb; break;
             case "searchInputb" : myElement=searchInputb; break;
+            case "description" : myElement=description; break;
         }
 
         sendKeysFunction(myElement, value);
