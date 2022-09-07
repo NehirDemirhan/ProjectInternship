@@ -1,9 +1,15 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.List;
 
 public class DialogContent extends Parent {
 
@@ -53,6 +59,40 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//span[contains(text(),'Delete')]")
     private WebElement deleteDialogBtn;
 
+    @FindBy(css = "ms-masked-text-field[placeholder='BANK_ACCOUNT.TITLE.IBAN'] input")
+    private WebElement ibanText;
+
+    @FindBy(id = "mat-select-value-11")
+    private WebElement currency;
+
+    @FindBy(xpath = "//span[contains(text(),' TRY ')]")
+    private WebElement currencyTRY;
+
+    @FindBy(xpath = "//span[contains(text(),' USD ')]")
+    private WebElement currencyUSD;
+
+    @FindBy(css = "ms-text-field[placeholder='GENERAL.FIELD.INTEGRATION_CODE'] input")
+    private WebElement integrationCode;
+
+    @FindBy(css = "ms-edit-button[class='ng-star-inserted'] button")
+    private List<WebElement> editButton;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='code']//input")
+    private WebElement codeInputb;
+
+    @FindBy(xpath = "//ms-text-field[contains(@placeholder,\"FIELD.NAME\")]//input")
+    private WebElement searchInputb;
+
+    @FindBy(xpath = "//span[contains(text(),'Search')]")
+    private WebElement searchButtonb;
+
+    @FindBy(xpath = "//ms-edit-button[@class='ng-star-inserted']//button")
+    private WebElement editButtonb;
+
+    @FindBy(css = "svg[data-icon=\"trash-can\"]")
+    private WebElement deleteButtonb;
+
+
 
 
     WebElement myElement;
@@ -62,7 +102,12 @@ public class DialogContent extends Parent {
             case "username" : myElement=username; break;
             case "password" : myElement=password; break;
             case "nameInput" : myElement=nameInput; break;
+            case "searchInput" : myElement=searchInput; break;
             case "shortNameInput" : myElement=shortNameInput; break;
+            case "ibanText" : myElement=ibanText; break;
+            case "integrationCode" : myElement=integrationCode; break;
+            case "codeInputb" : myElement=codeInputb; break;
+            case "searchInputb" : myElement=searchInputb; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -75,6 +120,19 @@ public class DialogContent extends Parent {
             case "loginButton" : myElement=loginButton; break;
             case "addButton" : myElement=addButton; break;
             case "saveButton" : myElement=saveButton; break;
+            case "searchButton" : myElement=searchButton; break;
+            case "deleteButton" : myElement=deleteButton; break;
+            case "deleteDialogBtn" : myElement=deleteDialogBtn; break;
+            case "currency" : myElement=currency; break;
+            case "currencyTRY" : myElement=currencyTRY; break;
+            case "currencyUSD" : myElement=currencyUSD; break;
+            case "editButton" :
+                GWD.getWait().until(ExpectedConditions.numberOfElementsToBeLessThan(By.cssSelector("ms-edit-button[class='ng-star-inserted'] button"),editButton.size()));
+                myElement=editButton.get(0);
+                break;
+            case "searchButtonb" : myElement=searchButtonb; break;
+            case "editButtonb" : myElement=editButtonb; break;
+            case "deleteButtonb" : myElement=deleteButtonb; break;
         }
 
         clickFunction(myElement);
@@ -93,9 +151,7 @@ public class DialogContent extends Parent {
     public void searchAndDelete(String searchText) {
         findAndSend("searchInput", searchText);
         findAndClick("searchButton");
-
-        waitUntilLoading();
-
+        waitUntilLoading(searchButton);
         findAndClick("deleteButton");
         findAndClick("deleteDialogBtn");
 
