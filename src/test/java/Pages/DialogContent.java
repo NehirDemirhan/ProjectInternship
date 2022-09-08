@@ -94,6 +94,18 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//mat-form-field[@appearance='outline']//textarea")
     private WebElement description;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='order']//input")
+    private WebElement order;
+
+    @FindBy(xpath = "//td[contains(text(),'yalan')]//following::div/ms-edit-button")
+    private WebElement gradeEdit;
+
+    @FindBy(xpath = "//td[contains(text(),'nalan')]//following::div/ms-delete-button")
+    private  WebElement gradeDelete;
+
+
+
+
 
 
 
@@ -111,6 +123,7 @@ public class DialogContent extends Parent {
             case "codeInputb" : myElement=codeInputb; break;
             case "searchInputb" : myElement=searchInputb; break;
             case "description" : myElement=description; break;
+            case "order" : myElement=order; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -136,6 +149,8 @@ public class DialogContent extends Parent {
             case "searchButtonb" : myElement=searchButtonb; break;
             case "editButtonb" : myElement=editButtonb; break;
             case "deleteButtonb" : myElement=deleteButtonb; break;
+            case "gradeEdit" : myElement=gradeEdit; break;
+            case "gradeDelete" : myElement=gradeDelete; break;
         }
 
         clickFunction(myElement);
