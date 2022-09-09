@@ -6,13 +6,12 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.Listeners;
 
 @CucumberOptions(
-        tags = "@SmokeTest",
+        tags = "@Hankulu",
         features = {"src/test/java/FeatureFiles"},
         glue = {"StepDefinitions"}
 )
 @Listeners({ExtentITestListenerClassAdapter.class})
-public class GIP4_6_ExtentReport extends AbstractTestNGCucumberTests {
 
-
+public class GIP4_10_ExtendReport extends AbstractTestNGCucumberTests {
 
 }
