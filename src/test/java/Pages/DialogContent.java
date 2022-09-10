@@ -46,6 +46,7 @@ public class DialogContent extends Parent {
     @FindBy(xpath="//div[contains(text(),'successfully')]")
     private WebElement successMessage;
 
+
     @FindBy(xpath = "(//div[contains(@class,'mat-form-field-infix ng-tns-c74')]//input)[1]")
     private WebElement searchInput;
 
@@ -91,26 +92,25 @@ public class DialogContent extends Parent {
     @FindBy(css = "svg[data-icon=\"trash-can\"]")
     private WebElement deleteButtonb;
 
-    @FindBy(xpath = "//mat-form-field[@appearance='outline']//textarea")
-    private WebElement description;
-
-    @FindBy(xpath = "//ms-text-field[@formcontrolname='order']//input")
-    private WebElement order;
-
-    @FindBy(xpath = "//td[contains(text(),'yalan')]//following::div/ms-edit-button")
-    private WebElement gradeEdit;
-
-    @FindBy(xpath = "//td[contains(text(),'nalan')]//following::div/ms-delete-button")
-    private  WebElement gradeDelete;
 
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
+    private WebElement nameInputT;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']//input")
+    private WebElement shrtnamee;
 
+    @FindBy(xpath = "//ms-save-button[@class='ng-star-inserted']")
+    private WebElement saveButtonN;
 
+    @FindBy(css = "[class='mat-focus-indicator mat-tooltip-trigger mat-button mat-icon-button mat-button-base mat-accent ng-star-inserted']")
+    private WebElement EditButtonn;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='name']//input")
+    private WebElement EditName;
 
-
-
+    @FindBy(xpath = "//ms-text-field[contains(@placeholder,\"GENERAL.FIELD.NAME\")]//input")
+    private WebElement searchInputt;
 
 
 
@@ -128,8 +128,9 @@ public class DialogContent extends Parent {
             case "integrationCode" : myElement=integrationCode; break;
             case "codeInputb" : myElement=codeInputb; break;
             case "searchInputb" : myElement=searchInputb; break;
-            case "description" : myElement=description; break;
-            case "order" : myElement=order; break;
+            case "nameInputT" : myElement=nameInputT; break;
+            case "shrtnamee" : myElement=shrtnamee; break;
+            case "searchInputt" : myElement=searchInputt; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -155,8 +156,10 @@ public class DialogContent extends Parent {
             case "searchButtonb" : myElement=searchButtonb; break;
             case "editButtonb" : myElement=editButtonb; break;
             case "deleteButtonb" : myElement=deleteButtonb; break;
-            case "gradeEdit" : myElement=gradeEdit; break;
-            case "gradeDelete" : myElement=gradeDelete; break;
+            case "saveButtonN" : myElement=saveButtonN; break;
+            case "EditButtonn" : myElement=EditButtonn; break;
+            case "EditName" : myElement=EditName; break;
+
         }
 
         clickFunction(myElement);
