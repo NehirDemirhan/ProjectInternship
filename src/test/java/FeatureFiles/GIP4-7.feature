@@ -1,65 +1,78 @@
-Feature: School Locations Functionality
+Feature: Locations Functionality
 
   Background:
     Given Navigate to Campus
     When  Enter username and password and click login button
     Then  User should login successfully
 
-  Scenario:  Add a Locations
+  @GIP4-7
+  Scenario: Create Locations
     And Click on the element in the left Nav
       | setupOne    |
       | schoolSetup |
       | locations   |
 
-    And Click on the element in the Dialog content
+
+    And Click on the element in the Dialog
+      | school    |
+      | schoolNew |
       | addButton |
 
     And User sending the keys in Dialog content
-      | nameInput      | Samet |
-      | shortNameInput | Smt   |
-      | capacity       | 17    |
+      | nameInput      | Deneme |
+      | shortNameInput | Dnm    |
+      | capacity       | 5      |
 
-    And Click on the element in the Dialog content
-      | locations     |
-      | locationsType |
-
-    And Click on the element in the Dialog content
+    And Click on the element in the Dialog
       | saveButton |
 
-    Then Success message should be displayed
+    And Success message should be displayed
 
-
-  Scenario:  Edit a Locations
+  @GIP4-7
+  Scenario: Edit Locations
     And Click on the element in the left Nav
       | setupOne    |
       | schoolSetup |
       | locations   |
 
-    And Click on the element in the Dialog content
+
+    And Click on the element in the Dialog
+      | school     |
+      | schoolNew  |
       | editButton |
 
     And User sending the keys in Dialog content
-      | nameInput      | Samet123 |
-      | shortNameInput | Smt1234  |
+      | nameInput      | Deneme123 |
+      | shortNameInput | Dnm123    |
+      | capacity       | 7         |
 
-    And Click on the element in the Dialog content
+    And Click on the element in the Dialog
+      | locationType      |
+      | locationTypeOther |
+
+    And Click on the element in the Dialog
       | saveButton |
 
-    Then Success message should be displayed
+
+    And Success message should be displayed
 
 
-  Scenario:  Delete a Locations
+  @GIP4-7
+  Scenario: Delete locations
     And Click on the element in the left Nav
       | setupOne    |
       | schoolSetup |
       | locations   |
 
-    And Click on the element in the Dialog content
-      | deleteButton    |
-      | deleteDialogBtn |
-      | deleteButton    |
-      | deleteDialogBtn |
+
+    And Click on the element in the Dialog
+      | school          |
+      | schoolNew       |
       | deleteButton    |
       | deleteDialogBtn |
 
-    Then Success message should be displayed
+    And Success message should be displayed
+
+
+
+
