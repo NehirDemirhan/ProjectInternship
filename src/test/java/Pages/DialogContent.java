@@ -113,6 +113,23 @@ public class DialogContent extends Parent {
     private WebElement description1;
 
 
+    @FindBy(xpath = "(//mat-form-field[@style=\"margin-right: 8px;\"])[1]")
+    private WebElement school;
+
+    @FindBy(xpath = "//span[text()=\" New Auckland School \"]")
+    private WebElement schoolNew;
+
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname=\"capacity\"]//input")
+    private WebElement capacity;
+
+    @FindBy(xpath = "(//mat-form-field[@style=\"margin-right: 16px;\"])[2]//div")
+    private WebElement locationType;
+
+
+    @FindBy(xpath = "//span[text()=\" Other \"]")
+    private WebElement locationTypeOther;
+
+
 
 
 
@@ -140,6 +157,7 @@ public class DialogContent extends Parent {
             case "description2" : myElement=description2; break;
             case "priority" : myElement=priority; break;
             case "description1" : myElement=description1; break;
+            case "capacity" : myElement =capacity; break;
         }
 
         sendKeysFunction(myElement, value);
@@ -167,6 +185,10 @@ public class DialogContent extends Parent {
             case "deleteButtonb" : myElement=deleteButtonb; break;
             case "gradeEdit" : myElement=gradeEdit; break;
             case "gradeDelete" : myElement=gradeDelete; break;
+            case "school" : myElement =school; break;
+            case "schoolNew" : myElement =schoolNew; break;
+            case "locationType" : myElement =locationType; break;
+            case "locationTypeOther" : myElement =locationTypeOther; break;
         }
 
         clickFunction(myElement);
