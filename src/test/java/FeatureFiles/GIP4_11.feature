@@ -6,7 +6,7 @@ Feature:Discounts
     Then  User should login successfully
 
   @Sarı
-  Scenario: Create Grade Levels
+  Scenario: Create Discounts
     And Click on the element in the left Nav
       |setupOne   |
       |parameters |
