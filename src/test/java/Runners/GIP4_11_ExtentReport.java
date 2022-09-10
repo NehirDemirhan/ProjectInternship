@@ -11,6 +11,6 @@ import org.testng.annotations.Listeners;
         glue = {"StepDefinitions"}
 )
 @Listeners({ExtentITestListenerClassAdapter.class})
-public class GIP4_11_ExyentReport extends AbstractTestNGCucumberTests {
+public class GIP4_11_ExtentReport extends AbstractTestNGCucumberTests {
 
 }
