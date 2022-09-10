@@ -5,7 +5,7 @@ Feature:Human Resources
     When  Enter username and password and click login button
     Then  User should login successfully
 
-
+@Elif
   Scenario:  Add Attestations
     And We click on the element in the left Nav
       | humanResources |
@@ -23,6 +23,7 @@ Feature:Human Resources
 
     Then Success message should be displayed to user
 
+  @Elif
   Scenario: Edit attestations
     And We click on the element in the left Nav
       | humanResources |
@@ -44,6 +45,7 @@ Feature:Human Resources
 
     Then Success message should be displayed to user
 
+  @Elif
   Scenario: Delete attestations
     And We click on the element in the left Nav
       | humanResources |
