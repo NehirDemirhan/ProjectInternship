@@ -5,6 +5,7 @@ Feature: Position Categories Under Human Resources Setup Functionality
     When  Enter username and password and click login button
     Then  User should login successfully
 
+  @GIP4-1
   Scenario: Add Position Categories
 
     And Click on the element in the left Nav
@@ -24,6 +25,7 @@ Feature: Position Categories Under Human Resources Setup Functionality
     Then Success message should be displayed
 
 
+  @GIP4-1
   Scenario: Edit Position Categories
 
     And Click on the element in the left Nav
@@ -47,6 +49,7 @@ Feature: Position Categories Under Human Resources Setup Functionality
     Then Success message should be displayed
 
 
+  @GIP4-1
   Scenario: Delete Position Categories
 
     And Click on the element in the left Nav
@@ -59,7 +62,7 @@ Feature: Position Categories Under Human Resources Setup Functionality
 
     And Click on the element in the Dialog
       | searchButton    |
-      | deleteButtonb   |
+      | deleteButton   |
       | deleteDialogBtn |
 
     Then Success message should be displayed
