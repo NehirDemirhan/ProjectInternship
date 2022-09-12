@@ -63,3 +63,21 @@ Feature: Document Types under Parameters Setup Functionality
       | saveButton |
 
     Then Success message should be displayed
+
+
+  Scenario: Delete Document Types
+
+    And Click on the element in the left Nav
+      | setupOne      |
+      | parameters    |
+      | documentTypes |
+
+    And User sending the keys in Dialog content
+      | searchInput | MuharremTR2626 |
+
+    And Click on the element in the Dialog
+      | searchButton    |
+      | deleteButtonb   |
+      | deleteDialogBtn |
+
+    Then Success message should be displayed
