@@ -45,3 +45,21 @@ Feature: Position Categories Under Human Resources Setup Functionality
       | saveButton |
 
     Then Success message should be displayed
+
+
+  Scenario: Delete Position Categories
+
+    And Click on the element in the left Nav
+      | humanResources     |
+      | setupThree         |
+      | positionCategories |
+
+    And User sending the keys in Dialog content
+      | searchInput | Position Categories-MHRM |
+
+    And Click on the element in the Dialog
+      | searchButton    |
+      | deleteButtonb   |
+      | deleteDialogBtn |
+
+    Then Success message should be displayed
