@@ -129,6 +129,9 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//span[text()=\" Other \"]")
     private WebElement locationTypeOther;
 
+    @FindBy(xpath = "(//ms-add-button[contains(@tooltip,'BUTTON.ADD')])//button")
+    private WebElement addFields;
+
 
 
 
@@ -189,6 +192,7 @@ public class DialogContent extends Parent {
             case "schoolNew" : myElement =schoolNew; break;
             case "locationType" : myElement =locationType; break;
             case "locationTypeOther" : myElement =locationTypeOther; break;
+            case "addFields" : myElement =addFields; break;
         }
 
         clickFunction(myElement);
