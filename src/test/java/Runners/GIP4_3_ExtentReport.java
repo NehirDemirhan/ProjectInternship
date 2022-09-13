@@ -12,4 +12,5 @@ import org.testng.annotations.Listeners;
 )
 @Listeners({ExtentITestListenerClassAdapter.class})
 public class GIP4_3_ExtentReport extends AbstractTestNGCucumberTests {
+
 }
