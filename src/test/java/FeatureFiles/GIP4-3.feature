@@ -5,6 +5,7 @@ Feature: Document Types under Parameters Setup Functionality
     When  Enter username and password and click login button
     Then  User should login successfully
 
+  @MuharremTest
   Scenario: Add Document Types
 
     And Click on the element in the left Nav
@@ -33,6 +34,7 @@ Feature: Document Types under Parameters Setup Functionality
     Then Success message should be displayed
 
 
+  @MuharremTest
   Scenario: Edit Document Types
 
     And Click on the element in the left Nav
@@ -65,6 +67,7 @@ Feature: Document Types under Parameters Setup Functionality
     Then Success message should be displayed
 
 
+  @MuharremTest
   Scenario: Delete Document Types
 
     And Click on the element in the left Nav
