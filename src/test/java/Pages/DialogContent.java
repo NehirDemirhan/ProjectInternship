@@ -138,14 +138,6 @@ public class DialogContent extends Parent {
     @FindBy (xpath = "//input[@id='ms-text-field-1']")
     private WebElement depCode;
 
-    @FindBy (xpath = "//td[contains(text(),'Math101')]//following::div/ms-edit-button")
-    private WebElement editButtonMath;
-
-    @FindBy (xpath = "//td[contains(text(),'Math105')]//following::div/ms-delete-button")
-    private WebElement deleteMath101;
-
-    @FindBy (xpath = "//span[normalize-space()='Delete']")
-    private WebElement acceptDelete;
 
 
 
@@ -211,9 +203,6 @@ public class DialogContent extends Parent {
             case "schoolNew" : myElement =schoolNew; break;
             case "locationType" : myElement =locationType; break;
             case "locationTypeOther" : myElement =locationTypeOther; break;
-            case "deleteMath101" :myElement=deleteMath101;break;
-            case "acceptDelete" :myElement=acceptDelete; break;
-            case "editButtonMath" :myElement= editButtonMath; break;
         }
 
         clickFunction(myElement);

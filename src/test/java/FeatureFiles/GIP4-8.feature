@@ -5,6 +5,7 @@ Feature: School department Functionality
     When  Enter username and password and click login button
     Then  User should login successfully
 
+  @Yesim
   Scenario: Add school department
 
     And Click on the element in the left Nav
@@ -28,7 +29,7 @@ Feature: School department Functionality
       | departments |
 
     And Click on the element in the Dialog content
-      | editButtonMath |
+      | editButtonb |
     And User sending the keys in Dialog content
       | depName       | Math105                    |
       | depCode        | 105 |
@@ -42,6 +43,6 @@ Feature: School department Functionality
       | schoolSetup1   |
       | departments  |
     And Click on the element in the Dialog content
-      | deleteMath101 |
-      | acceptDelete  |
+      | deleteButton  |
+      | deleteDialogBtn |
     Then Success message should be displayed
