@@ -132,6 +132,12 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "(//ms-add-button[contains(@tooltip,'BUTTON.ADD')])//button")
     private WebElement addFields;
 
+    @FindBy (xpath = "//input[@id='ms-text-field-0']")
+    private WebElement depName;
+
+    @FindBy (xpath = "//input[@id='ms-text-field-1']")
+    private WebElement depCode;
+
 
 
 
@@ -161,6 +167,8 @@ public class DialogContent extends Parent {
             case "priority" : myElement=priority; break;
             case "description1" : myElement=description1; break;
             case "capacity" : myElement =capacity; break;
+            case "depName" :myElement=depName; break;
+            case "depCode" :myElement=depCode; break;
         }
 
         sendKeysFunction(myElement, value);
