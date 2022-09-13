@@ -45,13 +45,6 @@ public class LeftNav extends Parent{
     @FindBy(xpath="//span[contains(text(),'Grade Levels')]")
     private WebElement gradeLevels;
 
-    @FindBy(css = "[class='nav-link-title ng-tns-c249-18 ng-star-inserted']")
-    private WebElement setup;
-
-    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'ATTESTATION.TITLE.ADD')]")
-    private WebElement addButtonn;
-    @FindBy(xpath="//span[text()='Attestations']")
-    private WebElement attestations;
 
 
 
@@ -71,9 +64,6 @@ public class LeftNav extends Parent{
             case "subjectCategoriesb" : myElement=subjectCategoriesb; break;
             case "documentTypes" : myElement=documentTypes; break;
             case "gradeLevels" : myElement=gradeLevels; break;
-            case "setup" : myElement=setup; break;
-            case "attestations" : myElement=attestations; break;
-            case "addButtonn" : myElement=addButtonn; break;
         }
 
         clickFunction(myElement);
