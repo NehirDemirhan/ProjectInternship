@@ -21,6 +21,7 @@ Feature: School department Functionality
       | saveButton |
     Then Success message should be displayed
 
+  @Yesim
   Scenario: Edit school department
 
     And Click on the element in the left Nav
@@ -37,6 +38,7 @@ Feature: School department Functionality
       | saveButton |
     Then Success message should be displayed
 
+  @Yesim
   Scenario: Delete school department
     And Click on the element in the left Nav
       | setupOne     |
