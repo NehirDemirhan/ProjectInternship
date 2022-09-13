@@ -103,11 +103,11 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//td[contains(text(),'nalan')]//following::div/ms-delete-button")
     private  WebElement gradeDelete;
 
+    @FindBy(xpath = "//ms-text-field[contains(@placeholder,\"GENERAL.FIELD.NAME\")]//input")
+    private WebElement searchInputt;
 
-
-
-
-
+    @FindBy(css = "[class='mat-focus-indicator mat-tooltip-trigger mat-button mat-icon-button mat-button-base mat-accent ng-star-inserted']")
+    private WebElement EditButtonn;
 
 
 
@@ -130,6 +130,10 @@ public class DialogContent extends Parent {
             case "searchInputb" : myElement=searchInputb; break;
             case "description" : myElement=description; break;
             case "order" : myElement=order; break;
+            case "searchInputt" : myElement=searchInputt; break;
+
+
+
         }
 
         sendKeysFunction(myElement, value);
@@ -157,6 +161,7 @@ public class DialogContent extends Parent {
             case "deleteButtonb" : myElement=deleteButtonb; break;
             case "gradeEdit" : myElement=gradeEdit; break;
             case "gradeDelete" : myElement=gradeDelete; break;
+            case "EditButtonn" : myElement=EditButtonn; break;
         }
 
         clickFunction(myElement);

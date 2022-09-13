@@ -49,7 +49,7 @@ Feature:Human Resources
   Scenario: Delete attestations
     And We click on the element in the left Nav
       | humanResources |
-      | setup          |
+      | setupThree          |
       | attestations   |
 
     And The user delete item from Dialog
