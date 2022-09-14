@@ -12,18 +12,18 @@ Feature:Discounts
       |parameters |
       |discounts|
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       |addButton|
 
-    And User sending the keys in Dialog
+    And User sending the keys in Dialog content
       |description2   |fani|
       |integrationCode|12345|
       |priority       |  3  |
 
-    And  Click on the element in the Dialog
+    And  Click on the element in the Dialog content
       | saveButton |
 
-    And Success message should be display
+    And Success message should be displayed
 
 
   @Sarı
@@ -33,22 +33,22 @@ Feature:Discounts
       |parameters |
       |discounts|
 
-    And User sending the keys in Dialog
+    And User sending the keys in Dialog content
       |description1|fani|
 
-    And  Click on the element in the Dialog
+    And  Click on the element in the Dialog content
       |searchButtonb|
       |editButtonb  |
 
-    And User sending the keys in Dialog
+    And User sending the keys in Dialog content
       |description2    |dolan|
       |integrationCode |25836|
       |priority        |  2  |
 
-    And  Click on the element in the Dialog
+    And  Click on the element in the Dialog content
       |saveButton|
 
-    And Success message should be display
+    And Success message should be displayed
 
 
   @Sarı
@@ -58,12 +58,12 @@ Feature:Discounts
       |parameters |
       |discounts|
 
-    And User sending the keys in Dialog
+    And User sending the keys in Dialog content
       |description1|dolan|
 
-    And  Click on the element in the Dialog
+    And  Click on the element in the Dialog content
       |searchButtonb|
       |deleteButtonb|
       |deleteDialogBtn|
 
-    And Success message should be display
+    And Success message should be displayed
