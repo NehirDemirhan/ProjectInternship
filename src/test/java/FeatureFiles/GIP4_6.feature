@@ -65,5 +65,3 @@ Feature:Subject Categories
       |deleteDialogBtn|
 
     And Success message should be displayed
-
-
