@@ -8,7 +8,7 @@ import io.cucumber.java.en.Then;
 
 import java.util.List;
 
-public class GIP45Steps {
+public class GIP4Steps {
     LeftNav ln=new LeftNav();
     DialogContent dc=new DialogContent();
 
@@ -46,7 +46,4 @@ public class GIP45Steps {
             dc.searchAndDelete(listElement.get(i));
         }
     }
-
-
-
 }
