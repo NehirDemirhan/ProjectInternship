@@ -14,8 +14,6 @@ Feature: Locations Functionality
 
 
     And Click on the element in the Dialog content
-      | school    |
-      | schoolNew |
       | addButton |
 
     And User sending the keys in Dialog content
@@ -37,9 +35,7 @@ Feature: Locations Functionality
 
 
     And Click on the element in the Dialog content
-      | school     |
-      | schoolNew  |
-      | editButton |
+      | editButtonb |
 
     And User sending the keys in Dialog content
       | nameInput      | Deneme123 |
@@ -66,8 +62,6 @@ Feature: Locations Functionality
 
 
     And Click on the element in the Dialog content
-      | school          |
-      | schoolNew       |
       | deleteButton    |
       | deleteDialogBtn |
 
