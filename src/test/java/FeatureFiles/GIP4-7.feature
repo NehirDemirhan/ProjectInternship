@@ -13,7 +13,7 @@ Feature: Locations Functionality
       | locations   |
 
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | school    |
       | schoolNew |
       | addButton |
@@ -23,7 +23,7 @@ Feature: Locations Functionality
       | shortNameInput | Dnm    |
       | capacity       | 5      |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | saveButton |
 
     And Success message should be displayed
@@ -36,7 +36,7 @@ Feature: Locations Functionality
       | locations   |
 
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | school     |
       | schoolNew  |
       | editButton |
@@ -46,11 +46,11 @@ Feature: Locations Functionality
       | shortNameInput | Dnm123    |
       | capacity       | 7         |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | locationType      |
       | locationTypeOther |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | saveButton |
 
 
@@ -65,7 +65,7 @@ Feature: Locations Functionality
       | locations   |
 
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | school          |
       | schoolNew       |
       | deleteButton    |
