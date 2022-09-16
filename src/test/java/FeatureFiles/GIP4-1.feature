@@ -13,7 +13,7 @@ Feature: Position Categories Under Human Resources Setup Functionality
       | setupThree         |
       | positionCategories |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | addButton |
 
     And User sending the keys in Dialog content
@@ -41,7 +41,7 @@ Feature: Position Categories Under Human Resources Setup Functionality
       | editButton   |
 
     And User sending the keys in Dialog content
-      | nameInput | Position Categories-MHRMTR-Duzenlendi |
+      | nameInput | Position Categories-MHRMTR-Duzenlendi.. |
 
     And Click on the element in the Dialog content
       | saveButton |
