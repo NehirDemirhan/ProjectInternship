@@ -21,7 +21,7 @@ Feature:Human Resources
     And Click on the element in the Dialog content
       | saveButton |
 
-    Then Success message should be display
+    Then Success message should be displayed
 
   @Elif
   Scenario: Edit attestations
@@ -30,20 +30,20 @@ Feature:Human Resources
       | setupThree       |
       | attestations    |
 
-    And User sending the keys in Dialog
+    And User sending the keys in Dialog content
       | searchInputt | steven |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | searchButton |
       | EditButtonn  |
 
-    And User sending the keys in Dialog
+    And User sending the keys in Dialog content
       | nameInput | steven4 |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | saveButton |
 
-    Then Success message should be display
+    Then Success message should be displayed
 
   @Elif
   Scenario: Delete attestations
@@ -55,6 +55,6 @@ Feature:Human Resources
     And User delete item from Dialog
     | steven4 |
 
-    Then Success message should be display
+    Then Success message should be displayed
 
 
