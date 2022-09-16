@@ -13,7 +13,7 @@ Feature: Document Types under Parameters Setup Functionality
       | parameters    |
       | documentTypes |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | addButton |
 
     And User sending the keys in Dialog content
@@ -28,7 +28,7 @@ Feature: Document Types under Parameters Setup Functionality
 
     And Click the TAB key
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | saveButton |
 
     Then Success message should be displayed
@@ -45,7 +45,7 @@ Feature: Document Types under Parameters Setup Functionality
     And User sending the keys in Dialog content
       | searchInput | MuharremTR2626 |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | searchButton |
       | editButton   |
 
@@ -61,7 +61,7 @@ Feature: Document Types under Parameters Setup Functionality
 
     And Click the TAB key
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | saveButton |
 
     Then Success message should be displayed
@@ -78,7 +78,7 @@ Feature: Document Types under Parameters Setup Functionality
     And User sending the keys in Dialog content
       | searchInput | MuharremTR2626 |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | searchButton    |
       | deleteButtonb   |
       | deleteDialogBtn |
