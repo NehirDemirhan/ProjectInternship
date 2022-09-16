@@ -75,12 +75,7 @@ Feature: Document Types under Parameters Setup Functionality
       | parameters    |
       | documentTypes |
 
-    And User sending the keys in Dialog content
-      | searchInput | MuharremTR2626 |
-
-    And Click on the element in the Dialog content
-      | searchButton    |
-      | deleteButtonb   |
-      | deleteDialogBtn |
+    And User delete item from Dialog
+      | MuharremTR2626Edit |
 
     Then Success message should be displayed
