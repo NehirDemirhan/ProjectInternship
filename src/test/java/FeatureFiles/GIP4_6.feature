@@ -56,13 +56,9 @@ Feature:Subject Categories
       |setupfourb    |
       |subjectCategoriesb|
 
-    And User sending the keys in Dialog content
-      |searchInputb|ayaz |
 
-    And  Click on the element in the Dialog content
-      |searchButtonb|
-      |deleteButtonb|
-      |deleteDialogBtn|
+    And User delete item from Dialog
+      | ayaz |
 
     And Success message should be displayed
 
