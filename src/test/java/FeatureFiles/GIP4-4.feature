@@ -57,15 +57,8 @@ Feature: Fields Functionality
       | parameters |
       | fields     |
 
-    And User sending the keys in Dialog content
-      | searchInputb | z4350z |
-
-    And  Click on the element in the Dialog content
-      | searchButtonb |
-
-    And  Click on the element in the Dialog content
-      | deleteButton    |
-      | deleteDialogBtn |
+    And  User delete item from Dialog
+      | z4350z |
 
     And Success message should be displayed
 
