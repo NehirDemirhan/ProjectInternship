@@ -12,18 +12,18 @@ Feature:Grade Levels
       |parameters |
       |gradeLevels|
 
-    And Click on the element in the Dialog
+    And  Click on the element in the Dialog content
       |addButton|
 
-    And User sending the keys in Dialog
+    And User sending the keys in Dialog content
       |nameInput|yalan|
       |shortNameInput|yaldız|
       |order         |  3  |
 
-    And  Click on the element in the Dialog
+    And  Click on the element in the Dialog content
       | saveButton |
 
-    And Success message should be display
+    And Success message should be displayed
 
   @Hankulu
   Scenario: Edit Grade Levels
@@ -33,19 +33,19 @@ Feature:Grade Levels
       |gradeLevels|
 
 
-    And  Click on the element in the Dialog
+    And  Click on the element in the Dialog content
       |gradeEdit|
 
 
-    And User sending the keys in Dialog
+    And User sending the keys in Dialog content
       |nameInput|nalan|
       |shortNameInput|gül|
       |order         |  4  |
 
-    And  Click on the element in the Dialog
+    And  Click on the element in the Dialog content
       |saveButton|
 
-    And Success message should be display
+    And Success message should be displayed
 
   @Hankulu
   Scenario: Delete Grade Levels
@@ -54,8 +54,8 @@ Feature:Grade Levels
       |parameters |
       |gradeLevels|
 
-    And  Click on the element in the Dialog
+    And  Click on the element in the Dialog content
       |gradeDelete|
       |deleteDialogBtn|
 
-    And Success message should be display
+    And Success message should be displayed
