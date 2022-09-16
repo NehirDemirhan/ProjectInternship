@@ -13,7 +13,7 @@ Feature: Fields Functionality
       | parameters |
       | fields     |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | addFields |
 
     And User sending the keys in Dialog content
@@ -33,39 +33,39 @@ Feature: Fields Functionality
       | parameters |
       | fields     |
 
-    And User sending the keys in Dialog
+    And User sending the keys in Dialog content
       | searchInputb | x4353x |
 
 
-    And  Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | searchButtonb |
       | editButton    |
 
-    And User sending the keys in Dialog
+    And User sending the keys in Dialog content
       | nameInput  | z4350z |
       | codeInputb | z40z   |
 
-    And  Click on the element in the Dialog
+    And  Click on the element in the Dialog content
       | saveButton |
 
-    And Success message should be display
+    And Success message should be displayed
 
   @GIP4-4
   Scenario: Delete Fields
     And Click on the element in the left Nav
-      |setupOne|
-      |parameters |
-      |fields|
+      | setupOne   |
+      | parameters |
+      | fields     |
 
-    And User sending the keys in Dialog
+    And User sending the keys in Dialog content
       | searchInputb | z4350z |
 
-    And  Click on the element in the Dialog
+    And  Click on the element in the Dialog content
       | searchButtonb |
 
-    And  Click on the element in the Dialog
-      |deleteButton|
-      |deleteDialogBtn|
+    And  Click on the element in the Dialog content
+      | deleteButton    |
+      | deleteDialogBtn |
 
-    And Success message should be display
+    And Success message should be displayed
 
