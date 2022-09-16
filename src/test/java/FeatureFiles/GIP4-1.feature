@@ -17,9 +17,9 @@ Feature: Position Categories Under Human Resources Setup Functionality
       | addButton |
 
     And User sending the keys in Dialog content
-      | nameInput | Position Categories-MHRM |
+      | nameInput | Position Categories-MHRMTR |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | saveButton |
 
     Then Success message should be displayed
@@ -34,16 +34,16 @@ Feature: Position Categories Under Human Resources Setup Functionality
       | positionCategories |
 
     And User sending the keys in Dialog content
-      | searchInput | Position Categories-MHRM |
+      | searchInput | Position Categories-MHRMTR |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | searchButton |
       | editButton   |
 
     And User sending the keys in Dialog content
-      | nameInput | Position Categories-MHRM-Duzenlendi |
+      | nameInput | Position Categories-MHRMTR-Duzenlendi |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | saveButton |
 
     Then Success message should be displayed
@@ -58,11 +58,11 @@ Feature: Position Categories Under Human Resources Setup Functionality
       | positionCategories |
 
     And User sending the keys in Dialog content
-      | searchInput | Position Categories-MHRM |
+      | searchInput | Position Categories-MHRMTR |
 
-    And Click on the element in the Dialog
+    And Click on the element in the Dialog content
       | searchButton    |
-      | deleteButton   |
+      | deleteButton    |
       | deleteDialogBtn |
 
     Then Success message should be displayed
